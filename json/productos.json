@@ -1,0 +1,66 @@
+[
+    {
+        "_ID" : "1",
+        "categoria" : "fertilizantes",
+        "nombreProducto" : "",
+        "descripcion" : "",
+        "precio": "",
+        "stock" : ""
+    },
+    {
+        "_ID" : "2",
+        "categoria" : "fertilizantes",
+        "nombreProducto" : "",
+        "descripcion" : "",
+        "precio": "",
+        "stock" : ""
+    },
+    {
+        "_ID" : "3",
+        "categoria" : "fertilizantes",
+        "nombreProducto" : "",
+        "descripcion" : "",
+        "precio": "",
+        "stock" : ""
+    },
+    {
+        "_ID" : "4",
+        "categoria" : "fertilizantes",
+        "nombreProducto" : "",
+        "descripcion" : "",
+        "precio": "",
+        "stock" : ""
+    },
+    {
+        "_ID" : "5",
+        "categoria" : "fertilizantes",
+        "nombreProducto" : "",
+        "descripcion" : "",
+        "precio": "",
+        "stock" : ""
+    },
+    {
+        "_ID" : "6",
+        "categoria" : "fertilizantes",
+        "nombreProducto" : "",
+        "descripcion" : "",
+        "precio": "",
+        "stock" : ""
+    },
+    {
+        "_ID" : "7",
+        "categoria" : "fertilizantes",
+        "nombreProducto" : "",
+        "descripcion" : "",
+        "precio": "",
+        "stock" : ""
+    },
+    {
+        "_ID" : "8",
+        "categoria" : "fertilizantes",
+        "nombreProducto" : "",
+        "descripcion" : "",
+        "precio": "",
+        "stock" : ""
+    }
+]
