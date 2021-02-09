@@ -78,8 +78,18 @@ var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
 console.log("dasdasd" + miCarro[2].codigo );
 
 
-var cabeceraTabla = '<table class="table table-dark"><thead> <tr>  <th>#</th> <th>Producto</th> <th>precio</th> <th>opciones</th></tr></thead><tbody>';
-var footTabla = '</tbody></table>';
+var cabeceraTabla = `<table class="table table-dark">
+                        <thead> 
+                            <tr>  
+                                <th>#</th>
+                                <th>Producto</th> 
+                                <th>precio</th> 
+                                <th>opciones</th>
+                            </tr>
+                        </thead>
+                    <tbody>`;
+
+var footTabla = `</tbody></table>`;
 
    
     document.getElementById("carro").innerHTML = "carrito (" +miCarro.length+ ")";
@@ -90,7 +100,7 @@ var footTabla = '</tbody></table>';
 
     for (let i=0; i<miCarro.length;i++){
         aux=i+1;
-        cuerpoTabla = cuerpoTabla + '<tr><td>'+ aux +'</td><td>'+productos[miCarro[i].codigo - 1].titulo+'</td><td>$'+productos[miCarro[i].codigo - 1].precio+'</td><td> <button type="button" class="btn btn-success">+</button>    <button type="button" class="btn btn-info">-</button><button type="button" class="btn btn-danger" style="margin-left:10px;">Eliminar</button></td></tr>';
+        cuerpoTabla = cuerpoTabla + `<tr><td>`+ aux +`</td><td>`+ productos[miCarro[i].codigo - 1].titulo+ `</td><td>$`+productos[miCarro[i].codigo - 1].precio+'</td><td> <button type="button" class="btn btn-success">+</button>    <button type="button" class="btn btn-info">-</button><button type="button" class="btn btn-danger" style="margin-left:10px;">Eliminar</button></td></tr>';
 
         totalCarro = totalCarro + productos[miCarro[i].codigo - 1].precio
     }
