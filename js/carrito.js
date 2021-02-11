@@ -1,4 +1,4 @@
-var productos = [
+const productos = [
     {
         "codigo" : "1",
         "categoria" : "Fertilizantes",
@@ -108,3 +108,9 @@ var footTabla = `</tbody></table>`;
     
     document.getElementById("generarCarrito").innerHTML = cabeceraTabla + cuerpoTabla + '<tr><td>TOTAL</td><td>$'+totalCarro+'</td></tr>' +  footTabla;
 
+
+
+
+    /**JQUERY */
+
+ 
