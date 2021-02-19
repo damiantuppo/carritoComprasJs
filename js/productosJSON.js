@@ -1,4 +1,4 @@
-var productos = [
+const productos = [
     {
         "codigo" : "1",
         "categoria" : "Fertilizantes",
