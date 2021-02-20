@@ -1,6 +1,6 @@
-
+var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
 console.log ("Cantidad de productos: " + productos.length)
-
+$('#carro').text("carrito (" +miCarro.length+ ")");
 
 /**Aca armo la lista de productos que se muestra en la home */
 let imprimir ="";
@@ -39,7 +39,7 @@ function ArmarCarrito(codigo, cantidad) {
     };
   }
 
-  var miCarro = [];
+  
 
   function carrito (productoId){
       
@@ -51,11 +51,6 @@ function ArmarCarrito(codigo, cantidad) {
       
       console.log ("se agrego correctamente el producto "+miCarro [miCarro.length-1].codigo);
      
-      
-      //numProductosCarro++;
-      
-      //JQUERRY!!
-      //document.getElementById("carro").innerHTML = "carrito (" +miCarro.length+ ")";
       $('#carro').text("carrito (" +miCarro.length+ ")"); 
 
 
