@@ -1,1 +1,0 @@
-document.getElementById("nombre").addEventListener.change

@@ -1,5 +1,5 @@
 var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
-console.log ("Cantidad de productos: " + productos.length)
+console.log ("Cantidad de productos: " + productos.length);
 $('#carro').text("carrito (" +miCarro.length+ ")");
 
 /**Aca armo la lista de productos que se muestra en la home */
@@ -20,11 +20,14 @@ for (let i=1; i<=productos.length;i++){
 document.getElementById("prueba").innerHTML = imprimir;
 
 
+
+
+
 function ArmarCarrito(codigo, cantidad) {
     this.codigo = codigo;
     this.cantidad = cantidad;
 
-
+//Ver si le estoy dando o puedo darle un uso a las funciones estas
     this.agregar = function() {
       this.cantidad++;
       console.log("cantidad: " + this.cantidad);

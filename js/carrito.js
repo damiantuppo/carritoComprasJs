@@ -15,8 +15,8 @@ var cabeceraTabla = `<table class="table table-dark">
 
 var footTabla = `</tbody></table>`;
 
-   
-    document.getElementById("carro").innerHTML = "carrito (" +miCarro.length+ ")";
+    $('#carro').html("carrito (" +miCarro.length+ ")");
+    //document.getElementById("carro").innerHTML = "carrito (" +miCarro.length+ ")";
     console.log ("Tamaño del carrito" + miCarro.length);
  
     let cuerpoTabla = '';
@@ -35,8 +35,8 @@ var footTabla = `</tbody></table>`;
         totalCarro = totalCarro + productos[miCarro[i].codigo - 1].precio
     }
 
-    
-    document.getElementById("generarCarrito").innerHTML = cabeceraTabla + cuerpoTabla + '<tr><td>TOTAL</td><td>$'+totalCarro+'</td></tr>' +  footTabla;
+    $('#generarCarrito').html(cabeceraTabla + cuerpoTabla + '<tr><td>TOTAL</td><td>$'+totalCarro+'</td></tr>' +  footTabla);
+    //document.getElementById("generarCarrito").innerHTML = cabeceraTabla + cuerpoTabla + '<tr><td>TOTAL</td><td>$'+totalCarro+'</td></tr>' +  footTabla;
 
 
 
