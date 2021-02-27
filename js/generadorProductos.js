@@ -1,6 +1,20 @@
-var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
+var tamanioCarrito;
+
+if(JSON.parse(localStorage.getItem("carroCompras"))!=null){
+  miCarro = JSON.parse(localStorage.getItem("carroCompras"));
+}
 console.log ("Cantidad de productos: " + productos.length);
-$('#carro').text("carrito (" +miCarro.length+ ")");
+
+
+
+if(miCarro == null){
+  tamanioCarrito = 0;
+} else{
+  tamanioCarrito = miCarro.length;
+}
+$('#carro').text("carrito (" +tamanioCarrito+ ")");
+
+
 
 /**Aca armo la lista de productos que se muestra en la home */
 let imprimir ="";
@@ -49,14 +63,30 @@ function ArmarCarrito(codigo, cantidad) {
     /**Muestro por consola el id del producto agregado al carrito y el mumero de productos agregados */
       console.log ("Producto agregado al carrito: Codigo producto: "+productoId);
       console.log ("Cantidad de productos en la base de datos: "+productos.length);
+      console.log ("Cantidad de productos en la base de datos: "+tamanioCarrito);
+      console.log ("Mi carro: "+miCarro);
+
+      if (tamanioCarrito>0){
+        for (let i = 0; i < tamanioCarrito ; i++){
+          if (miCarro [i].codigo = productoId){
+            miCarro [i].codigo++;
+          } else {
+            miCarro [i] = new ArmarCarrito(productoId, 1);  
+          }
+        }     
+      } else {
+        miCarro [0] = new ArmarCarrito(productoId, 1);
+      }
       
-      miCarro [miCarro.length] = new ArmarCarrito(productoId, 1);  
+      //miCarro [miCarro.length] = new ArmarCarrito(productoId, 1);  
       
       console.log ("se agrego correctamente el producto "+miCarro [miCarro.length-1].codigo);
      
       $('#carro').text("carrito (" +miCarro.length+ ")"); 
 
 
+     
+     
       console.log (miCarro.length); /**ESTO ES PARA PRUEBAS EVENTUALMENTE VUELA*/
           
       console.log("mi carro: " + JSON.stringify(miCarro));
