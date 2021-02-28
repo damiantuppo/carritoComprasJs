@@ -1,20 +1,13 @@
 var tamanioCarrito;
-
-if(JSON.parse(localStorage.getItem("carroCompras"))!=null){
-  miCarro = JSON.parse(localStorage.getItem("carroCompras"));
-}
-console.log ("Cantidad de productos: " + productos.length);
-
-
-
+var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
 if(miCarro == null){
+  miCarro = [];
   tamanioCarrito = 0;
 } else{
   tamanioCarrito = miCarro.length;
 }
+//Reemplazo el tamaño del carrito en el id carro, para que se muestre en la pantalla
 $('#carro').text("carrito (" +tamanioCarrito+ ")");
-
-
 
 /**Aca armo la lista de productos que se muestra en la home */
 let imprimir ="";
@@ -31,10 +24,8 @@ for (let i=1; i<=productos.length;i++){
                               </div>
                             </div>`;
 }
-document.getElementById("prueba").innerHTML = imprimir;
-
-
-
+$('#prueba').html(imprimir);
+//document.getElementById("prueba").innerHTML = imprimir;
 
 
 function ArmarCarrito(codigo, cantidad) {
@@ -61,35 +52,34 @@ function ArmarCarrito(codigo, cantidad) {
   function carrito (productoId){
       
     /**Muestro por consola el id del producto agregado al carrito y el mumero de productos agregados */
-      console.log ("Producto agregado al carrito: Codigo producto: "+productoId);
-      console.log ("Cantidad de productos en la base de datos: "+productos.length);
-      console.log ("Cantidad de productos en la base de datos: "+tamanioCarrito);
-      console.log ("Mi carro: "+miCarro);
+      //console.log ("Producto agregado al carrito: Codigo producto: "+productoId);
+      //console.log ("Cantidad de productos en la base de datos: "+productos.length);
+      //console.log ("Cantidad de productos en en carrito: "+tamanioCarrito);
+      //console.log ("Mi carro: "+miCarro);
 
       if (tamanioCarrito>0){
+        console.log ("EL TAMAÑO DEL CARRITO ES MAYOR QUE CERO");
         for (let i = 0; i < tamanioCarrito ; i++){
-          if (miCarro [i].codigo = productoId){
-            miCarro [i].codigo++;
+          if (miCarro [i].codigo == productoId){
+            miCarro [i].cantidad++;
+            console.log ("Estoy en el if del for: "+miCarro);
           } else {
-            miCarro [i] = new ArmarCarrito(productoId, 1);  
+            miCarro [miCarro.length] = new ArmarCarrito(productoId, 1); 
+            console.log ("Estoy en el else: "+miCarro); 
           }
         }     
       } else {
         miCarro [0] = new ArmarCarrito(productoId, 1);
       }
-      
       //miCarro [miCarro.length] = new ArmarCarrito(productoId, 1);  
-      
-      console.log ("se agrego correctamente el producto "+miCarro [miCarro.length-1].codigo);
+      //console.log ("se agrego correctamente el producto "+miCarro [miCarro.length-1].codigo);
      
       $('#carro').text("carrito (" +miCarro.length+ ")"); 
 
-
-     
-     
-      console.log (miCarro.length); /**ESTO ES PARA PRUEBAS EVENTUALMENTE VUELA*/
+     // console.log ("TAMAÑO DEL CARRO"+miCarro.length); /**ESTO ES PARA PRUEBAS EVENTUALMENTE VUELA*/
           
-      console.log("mi carro: " + JSON.stringify(miCarro));
+      //console.log("mi carro: " + JSON.stringify(miCarro));
       localStorage.setItem("carroCompras", JSON.stringify(miCarro));
+      //console.log("mi carro: " + JSON.stringify(miCarro));
   }
 
