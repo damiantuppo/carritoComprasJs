@@ -25,8 +25,6 @@ for (let i=1; i<=productos.length;i++){
                             </div>`;
 }
 $('#prueba').html(imprimir);
-//document.getElementById("prueba").innerHTML = imprimir;
-
 
 function ArmarCarrito(codigo, cantidad) {
     this.codigo = codigo;
@@ -50,36 +48,29 @@ function ArmarCarrito(codigo, cantidad) {
   
 
   function carrito (productoId){
-      
-    /**Muestro por consola el id del producto agregado al carrito y el mumero de productos agregados */
-      //console.log ("Producto agregado al carrito: Codigo producto: "+productoId);
-      //console.log ("Cantidad de productos en la base de datos: "+productos.length);
-      //console.log ("Cantidad de productos en en carrito: "+tamanioCarrito);
-      //console.log ("Mi carro: "+miCarro);
-
+    tamanioCarrito = miCarro.length;
+   
       if (tamanioCarrito>0){
-        console.log ("EL TAMAÑO DEL CARRITO ES MAYOR QUE CERO");
+        let encontrado = false;
+        
+        //Este for recorre el carro y si encuentra que hay un item con algun codigo ya cargado, le suma 1 a cantidad
         for (let i = 0; i < tamanioCarrito ; i++){
+          console.log ("aca entre en el for i vale: "+i+ " product id " +productoId);
           if (miCarro [i].codigo == productoId){
-            miCarro [i].cantidad++;
-            console.log ("Estoy en el if del for: "+miCarro);
-          } else {
-            miCarro [miCarro.length] = new ArmarCarrito(productoId, 1); 
-            console.log ("Estoy en el else: "+miCarro); 
+            miCarro [i].cantidad = miCarro [i].cantidad + 1;
+            encontrado = true;
+          }  
           }
-        }     
+        if (!encontrado){
+            miCarro [miCarro.length] = new ArmarCarrito(productoId, 1); 
+         }      
       } else {
         miCarro [0] = new ArmarCarrito(productoId, 1);
       }
-      //miCarro [miCarro.length] = new ArmarCarrito(productoId, 1);  
-      //console.log ("se agrego correctamente el producto "+miCarro [miCarro.length-1].codigo);
-     
+           
       $('#carro').text("carrito (" +miCarro.length+ ")"); 
 
-     // console.log ("TAMAÑO DEL CARRO"+miCarro.length); /**ESTO ES PARA PRUEBAS EVENTUALMENTE VUELA*/
-          
-      //console.log("mi carro: " + JSON.stringify(miCarro));
       localStorage.setItem("carroCompras", JSON.stringify(miCarro));
-      //console.log("mi carro: " + JSON.stringify(miCarro));
+      miCarro = JSON.parse(localStorage.getItem("carroCompras"));
   }
 

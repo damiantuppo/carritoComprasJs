@@ -1,5 +1,3 @@
-
-
 var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
 
 var cabeceraTabla = `<table class="table table-dark">
@@ -36,7 +34,10 @@ var footTabla = `</tbody></table>`;
     }
 
     $('#generarCarrito').html(cabeceraTabla + cuerpoTabla + '<tr><td>TOTAL</td><td>$'+totalCarro+'</td></tr>' +  footTabla);
-    //document.getElementById("generarCarrito").innerHTML = cabeceraTabla + cuerpoTabla + '<tr><td>TOTAL</td><td>$'+totalCarro+'</td></tr>' +  footTabla;
+    
+
+
+    
 
 
 
