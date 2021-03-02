@@ -19,7 +19,7 @@ for (let i=1; i<=productos.length;i++){
                                   <h4 class="card-title">${ productos[i-1].titulo }</h4>
                                     <h5 class="card-title">${productos[i-1].precio }</h5>
                                       <p class="card-text">${ productos[i-1].descripcion}</p>
-                                        <button id="" name="producto ${i.toString()}" onclick="carrito(${i})" value="${i.toString()}" type="" class="btn btn-primary btn-block">Agregar al carrito</button>
+                                        <button id="" name="producto ${i.toString()}"onclick="carrito(${i})" value="${i.toString()}" type="" class="btn btn-primary btn-block">Agregar al carrito</button>
                                   </div>
                               </div>
                             </div>`;
