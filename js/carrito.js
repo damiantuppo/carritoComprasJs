@@ -40,8 +40,15 @@ function MostrarCarrito() {
         $('#generarCarrito').html(cabeceraTabla + cuerpoTabla + '<tr><td>TOTAL</td><td>$'+totalCarro+'</td></tr>' +  footTabla);
     }    
 
-    //MUESTRO EL CARRITO POR PRIMERA VEZ
+
+
+
+//MUESTRO EL CARRITO POR PRIMERA VEZ
 MostrarCarrito ();   
+
+
+
+
 /**
  * Funciones para manejar el carrito
  **/    
@@ -75,3 +82,6 @@ function AumentarCantidad(id){
     console.log("que tenemos por aca, estamos en aumentar Cantidad" + miCarro[id].cantidad);
     MostrarCarrito ();
 }
+
+
+

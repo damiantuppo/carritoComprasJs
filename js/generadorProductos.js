@@ -1,5 +1,17 @@
 var tamanioCarrito;
 var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
+
+
+//levantar con ajax los productos para tenerlos disponibles
+/**function lee_json() {
+  $.getJSON("../json/productos.json", var productos) {
+      
+      });
+  });
+}
+lee_json();
+*/
+
 if(miCarro == null){
   miCarro = [];
   tamanioCarrito = 0;
