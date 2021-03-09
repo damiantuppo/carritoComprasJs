@@ -3,29 +3,18 @@ var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
 var productos;
 
 //levantar con ajax los productos para tenerlos disponibles
-/**function lee_json() {
-  $.getJSON("../json/productos.json", var productos) {
-      
-      });
-  });
-}
-lee_json();
-*/
 $.ajax({
   type: "get",
-  url: "clientes.json",
+  url: "../json/productos.json",
   dataType: "json",
   success: function (respuesta) {
     productos = respuesta;
     MostrarProductos();
   }
-
 });
 
 
-
 function MostrarProductos(){
-
 
   if(miCarro == null){
     miCarro = [];
@@ -57,11 +46,6 @@ function MostrarProductos(){
 
  
 
-
-
-
-
-
 function ArmarCarrito(codigo, cantidad) {
       this.codigo = codigo;
       this.cantidad = cantidad;
@@ -83,10 +67,6 @@ function ArmarCarrito(codigo, cantidad) {
 
     
 
-
-
-
-    
     function carrito (productoId){
       tamanioCarrito = miCarro.length;
     

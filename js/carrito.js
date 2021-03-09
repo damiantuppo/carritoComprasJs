@@ -1,5 +1,5 @@
 var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
-
+var productos;
 
 function MostrarCarrito() {
     var cabeceraTabla = `<table class="table table-dark">
@@ -44,8 +44,16 @@ function MostrarCarrito() {
 
 
 //MUESTRO EL CARRITO POR PRIMERA VEZ
-MostrarCarrito ();   
-
+   
+$.ajax({
+    type: "get",
+    url: "../json/productos.json",
+    dataType: "json",
+    success: function (respuesta) {
+      productos = respuesta;
+      MostrarCarrito ();
+    }
+  });
 
 
 
