@@ -1,7 +1,7 @@
 [
     {
         "codigo" : "1",
-        "categoria" : "Fertilizantes",
+        "categoria" : "1",
         "titulo" : "Producto 1",
         "descripcion" : "Descripción del producto 1",
         "precio": 1233,
@@ -10,7 +10,7 @@
     },
     {
         "codigo" : "2",
-        "categoria" : "Remeras",
+        "categoria" : "2",
         "titulo" : "Producto 2",
         "descripcion" : "Descripción del producto 1",
         "precio": 4322,
@@ -19,7 +19,7 @@
     },
     {
         "codigo" : "3",
-        "categoria" : "Calzado",
+        "categoria" : "3",
         "titulo" : "Producto 3",
         "descripcion" : "Descripción del producto 1",
         "precio": 4123,
@@ -28,7 +28,7 @@
     },
     {
         "codigo" : "4",
-        "categoria" : "Fertilizantes",
+        "categoria" : "1",
         "titulo" : "Producto 4",
         "descripcion" : "Descripción del producto 1",
         "precio": 1234,
@@ -37,7 +37,7 @@
     },
     {
         "codigo" : "5",
-        "categoria" : "Cultivo",
+        "categoria" : "4",
         "titulo" : "Producto 5",
         "descripcion" : "Descripción del producto 1",
         "precio": 4321,
@@ -46,7 +46,7 @@
     },
     {
         "codigo" : "6",
-        "categoria" : "Fertilizantes",
+        "categoria" : "1",
         "titulo" : "Producto 6",
         "descripcion" : "Descripción del producto 1",
         "precio": 2341,
@@ -55,7 +55,7 @@
     },
     {
         "codigo" : "7",
-        "categoria" : "Cultivo",
+        "categoria" : "4",
         "titulo" : "Producto 7",
         "descripcion" : "Descripción del producto 1",
         "precio": 4324,
@@ -64,7 +64,7 @@
     },
     {
         "codigo" : "8",
-        "categoria" : "Remeras",
+        "categoria" : "2",
         "titulo" : "Producto 8",
         "descripcion" : "Descripción del producto 1",
         "precio": 1209,

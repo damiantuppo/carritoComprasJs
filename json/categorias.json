@@ -1,0 +1,23 @@
+[
+    {
+        "codigo" : "1",
+        "categoria" : "Fertilizantes"
+       
+    },
+    {
+        "codigo" : "2",
+        "categoria" : "Remeras"
+       
+    },
+    {
+        "codigo" : "3",
+        "categoria" : "Calzado"
+     
+    },
+    {
+        "codigo" : "4",
+        "categoria" : "Cultivo"
+      
+    }
+
+]

@@ -1,6 +1,7 @@
 var tamanioCarrito;
 var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
 var productos;
+var categorias;
 
 //levantar con ajax los productos para tenerlos disponibles
 $.ajax({
@@ -13,6 +14,20 @@ $.ajax({
   }
 });
 
+//levantar con ajax los productos para tenerlos disponibles
+$.ajax({
+  type: "get",
+  url: "../json/categorias.json",
+  dataType: "json",
+  success: function (respuesta) {
+    categorias = respuesta;
+    
+  }
+});
+
+function FiltrarProductos(codigo){
+  
+}
 
 function MostrarProductos(){
 
