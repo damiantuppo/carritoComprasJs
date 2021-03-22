@@ -1,6 +1,19 @@
 var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
 var productos;
 
+//MUESTRO EL CARRITO POR PRIMERA VEZ
+   
+$.ajax({
+    type: "get",
+    url: "../json/productos.json",
+    dataType: "json",
+    success: function (respuesta) {
+      productos = respuesta;
+      MostrarCarrito ();
+    }
+  });
+
+
 function MostrarCarrito() {
     var cabeceraTabla = `<table class="table table-dark">
                             <thead> 
@@ -39,22 +52,6 @@ function MostrarCarrito() {
 
         $('#generarCarrito').html(cabeceraTabla + cuerpoTabla + '<tr><td>TOTAL</td><td>$'+totalCarro+'</td></tr>' +  footTabla);
     }    
-
-
-
-
-//MUESTRO EL CARRITO POR PRIMERA VEZ
-   
-$.ajax({
-    type: "get",
-    url: "../json/productos.json",
-    dataType: "json",
-    success: function (respuesta) {
-      productos = respuesta;
-      MostrarCarrito ();
-    }
-  });
-
 
 
 /**

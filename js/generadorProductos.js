@@ -2,6 +2,8 @@ var tamanioCarrito;
 var miCarro = JSON.parse(localStorage.getItem("carroCompras"));
 var productos;
 var categorias;
+var codigo = 0;
+
 
 //levantar con ajax los productos para tenerlos disponibles
 $.ajax({
@@ -10,11 +12,11 @@ $.ajax({
   dataType: "json",
   success: function (respuesta) {
     productos = respuesta;
-    MostrarProductos();
+    FiltrarProductos(codigo);
   }
 });
 
-//levantar con ajax los productos para tenerlos disponibles
+//levantar con ajax las categorias para tenerlas disponibles
 $.ajax({
   type: "get",
   url: "../json/categorias.json",
@@ -25,9 +27,37 @@ $.ajax({
   }
 });
 
+
+
 function FiltrarProductos(codigo){
-  
-}
+
+//aca me hubiese gustado optimizar de alguna manera, pero no lo logré
+  $.ajax({
+    type: "get",
+    url: "../json/productos.json",
+    dataType: "json",
+    success: function (respuesta) {
+      productos = respuesta;
+      
+    }
+  });
+
+  if (codigo==0){
+    MostrarProductos();
+  }
+    else{
+      for(let i=0;i<productos.length;i++){
+        if(productos[i].categoria != codigo){
+          productos.splice(i, 1);
+          i--;
+          
+        }
+        
+      }
+      MostrarProductos();
+    }
+  }
+
 
 function MostrarProductos(){
 
@@ -81,7 +111,6 @@ function ArmarCarrito(codigo, cantidad) {
     }
 
     
-
     function carrito (productoId){
       tamanioCarrito = miCarro.length;
     

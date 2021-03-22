@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Carrito de compras">
+    <meta name="author" content="Damian Tuppo">
 
    
-    <title>Tienda online</title>
+    <title>Mi carro!!</title>
     
   
     <!-- Bootstrap core CSS -->
@@ -33,15 +33,17 @@
                 <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Preguntas frecuentes</a>
+                <a class="nav-link" href="Preguntas.html">Preguntas frecuentes</a>
             </li>
             
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
                        
-                            <a class="dropdown-item" href="#">Categoria 1</a>
-                            <a class="dropdown-item" href="#">Categoria 2</a>
+                    <button class="dropdown-item" onclick="FiltrarProductos(1)">Fertilizantes</button>
+                    <button class="dropdown-item" onclick="FiltrarProductos(2)">Remeras</button>
+                    <button class="dropdown-item" onclick="FiltrarProductos(3)">Calzado</button>
+                    <button class="dropdown-item" onclick="FiltrarProductos(4)">Cultivos</button>
                       
                </div>
             </li>
@@ -96,8 +98,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
     <!-- Enlaces js propios-->
-    <script src="js/productosJSON.js"></script>
     <script src="js/carrito.js"></script>    
+    <script src="js/generadorProductos.js"></script>      
 
 </body>
 </html>
