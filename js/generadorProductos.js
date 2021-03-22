@@ -85,7 +85,7 @@ function MostrarProductos(){
                                 </div>
                               </div>`;
   }
-  $('#prueba').html(imprimir);
+  $('#mostarProductos').html(imprimir);
 
 }  
 
@@ -98,15 +98,15 @@ function ArmarCarrito(codigo, cantidad) {
   //Ver si le estoy dando o puedo darle un uso a las funciones estas
       this.agregar = function() {
         this.cantidad++;
-        console.log("cantidad: " + this.cantidad);
+        
       };
       this.quitar = function() {
           this.cantidad--;
-          console.log("cantidad " + this.cantidad);
+          
         };
       this.eliminar = function() {
           this.cantidad = 0;
-          console.log("el precio es: " + this.precio);
+          
       };
     }
 
@@ -119,7 +119,7 @@ function ArmarCarrito(codigo, cantidad) {
           
           //Este for recorre el carro y si encuentra que hay un item con algun codigo ya cargado, le suma 1 a cantidad
           for (let i = 0; i < tamanioCarrito ; i++){
-            console.log ("aca entre en el for i vale: "+i+ " product id " +productoId);
+            
             if (miCarro [i].codigo == productoId){
               miCarro [i].cantidad = miCarro [i].cantidad + 1;
               encontrado = true;
